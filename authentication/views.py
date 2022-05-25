@@ -23,7 +23,7 @@ def signin(request):
             if login_details[0][0] == password:
                 return HttpResponseRedirect("/inbox")
             else:
-                messages.error(request, "Password doesnot match")
+                messages.error(request, "Incorrect password")
     return render(request, "authentication/signin.html")
 
 def signup(request): #Register
